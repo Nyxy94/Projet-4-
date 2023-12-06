@@ -1,0 +1,110 @@
+@mixin button-shadow {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.fonctionnement {
+    padding: 48px 20px 68px 20px;
+   
+
+    @media screen and (min-width:1024px) {
+        padding: 50px 180px;
+
+    }
+
+
+    .fonctionnement__title {
+        font-size: 24px;
+        font-weight: 700 !important;
+    }
+
+    .fonctionnement__content {
+        flex-direction: column;
+        display: flex;
+        margin-left: 12px;
+        gap: 25px;
+
+        @media screen and (min-width:1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .fonctionnement__button {
+        border-radius: 20px;
+        background: var(--Background, #F6F6F6);
+        border: none;
+        @include fonctionnement-button-shadow;
+        height: 72px;
+        cursor: pointer;
+
+        @media screen and (min-width:1024px) {
+            flex-basis: 30%;
+        }
+    }
+
+    .fonctionnement__number {
+        position: relative;
+        display: flex;
+        right: 19px;
+        top: 25px;
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+        font-weight: 500;
+        border-radius: 50%;
+        background-color: $main-color;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .fonctionnement__button--style {
+        font-size: 16px;
+        font-weight: 500;
+        gap: 27px;
+        display: flex;
+        padding-left: 22px;
+        padding-bottom: 28px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        align-items: center;
+    }
+
+    .fa-mobile:hover {
+        color: $main-color;
+    }
+    .fa-list:hover {
+        color: $main-color;
+    }
+    .fa-store:hover {
+        color: $main-color;
+    }
+
+
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 57px;
+
+    .form__button {
+        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        border-radius: 25px;
+        width: 218px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        @include button-shadow;
+    }
+
+    .form__content {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        margin: 13px 18.75px 13px 18.75px;
+
+    }
+}

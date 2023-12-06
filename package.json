@@ -1,0 +1,23 @@
+{
+  "name": "sass-compile",
+  "version": "1.0.0",
+  "description": "a simple sass compile config",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded sass/main.scss:main.css"
+    
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nyxy94/Projet-4.git"
+  },
+  "keywords": [
+    "projet"
+  ],
+  "author": "jordane",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}

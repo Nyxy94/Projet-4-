@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ohmyfood</title>
+    <link rel="stylesheet" href="../main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Playpen+Sans:wght@100&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&family=Montserrat&family=Playpen+Sans:wght@100&family=Roboto&family=Shrikhand&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <header>
+            <nav class="navbar">
+                <div class="navbar__back">
+                    <a href="../index.html" class="navbar__arrow">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <img class="navbar__logo" src="../images/logo/ohmyfood.png" alt="Logo ohmyfood">
+                </div>
+                <img class="img-menu" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+            </nav>
+        </header>
+    </div>
+    <main>
+        <section class="container">
+            <div class="container__banner">
+                <h1 class="container__title">La palette du gout
+                    <i class="fa-regular fa-heart my-heart-empty"></i>
+                    <i class="fa-solid fa-heart my-heart-full"></i>
+                </h1>
+            </div>
+            <div class="menu">
+                <h2 class="menu__title">ENTRÉES</h2>
+                <div class="menu__block">
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Fricassée d'escargots</h3>
+                            <p class="choice__text--subtitle">Au piment d'Espelette</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>25€</span>
+                        </div>
+                    </button>
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Foie gras de canard mi-cuit</h3>
+                            <p class="choice__text--subtitle">Et ses copeaux de truffe noire</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>35€</span>
+                        </div>
+                    </button>
+                    <button class="choice-without-shadow">
+                        <div class="choice-without-shadow__text">
+                            <h3 class="choice-without-shadow__text--title">Oeuf au plat</h3>
+                            <p class="choice-without-shadow__text--subtitle">Assaisonné à la truffe sur lit de caviar</p>
+                        </div>
+                        <div class="choice-without-shadow__price">
+                            <span>20€</span>
+                        </div>
+                    </button>
+                </div>
+                <h2 class="menu__title">PLATS</h2>
+                <div class="menu__block">
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Filet de boeuf aux herbes</h3>
+                            <p class="choice__text--subtitle">Accompagné de sa ribambelle de légumes</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>40€</span>
+                        </div>
+                    </button>
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Parmentier de queue de boeuf</h3>
+                            <p class="choice__text--subtitle">À la truffe noire sur sa purée de panais</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>35€</span>
+                        </div>
+                    </button>
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Filet de turbot</h3>
+                            <p class="choice__text--subtitle">Aux agrumes</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>44€</span>
+                        </div>
+                    </button>
+                </div>
+                <h2 class="menu__title">DESSERTS</h2>
+                <div class="menu__block">
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Paris-Brest</h3>
+                            <p class="choice__text--subtitle">Revisité</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>18€</span>
+                        </div>
+                    </button>
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Macaron au chocolat d'exception</h3>
+                            <p class="choice__text--subtitle">Et glace à la vanille de Madagascar</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>22€</span>
+                        </div>
+                    </button>
+                    <button class="choice">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Mousse au chocolat</h3>
+                            <p class="choice__text--subtitle">Au piment d'Espelette et à la truffe noire</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>23€</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <form class="form">
+                    <bouton class="form__button">
+                        <span class="form__content">Commander</span>
+                    </bouton>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <h2 class="footer__title">ohmyfood</h2>
+        <ol class="footer__list">
+            <li><a href="#" class="footer__list--color"><span><i class="fa-solid fa-utensils"></i></span>Proposer un
+                    restaurant</a></li>
+            <li><a href="#" class="footer__list--color"><span><i
+                            class="fa-regular fa-handshake"></i></span>Partenaire</a></li>
+            <li><a href="#" class="footer__list--color">Mentions légales</a></li>
+            <li><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=fr&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1241721736%3A1701721676032400&theme=glif" class="footer__list--color">Contact</a></li>
+        </ol>
+    </footer>
+</body>
+
+</html>

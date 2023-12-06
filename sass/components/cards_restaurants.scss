@@ -1,0 +1,116 @@
+.restaurants {
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 18px 40px 18px;
+
+    @media screen and (min-width: 1024px) {
+        padding-left: 180px;
+        padding-right: 180px;
+    }
+
+    .restaurants__title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .restaurants__card {
+        border-radius: 15px;
+        background-color: #fff;
+        @include card-shadow;
+        height: 16em;
+        margin-bottom: 18px;
+
+        @media screen and (min-width: 1024px) {
+            margin: 0px;
+
+        }
+    }
+
+
+    .restaurants__img {
+        width: 100%;
+        height: 100%;
+        max-height: 11em;
+        object-fit: cover;
+        display: flex;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+    }
+
+    .restaurants__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .restaurants__text {
+        padding-left: 13px;
+        padding-bottom: 12px;
+        padding-top: 10px;
+        color: black;
+    }
+
+    .restaurants__subtitle {
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 5px;
+        margin-bottom: 0px;
+
+    }
+
+    .restaurants__paragraphe {
+        font-size: 17px;
+        font-weight: 300;
+        margin: 0px;
+
+    }
+
+    .restaurants__heart {
+        padding-right: 50px;
+        padding-bottom: 28px;
+    }
+
+}
+
+
+
+.fa-heart {
+    position: absolute;
+    font-size: 22px;
+    cursor: pointer;
+
+    
+
+}
+
+.my-heart-full {
+    opacity: 0;
+    transform-origin: bottom ;
+    transition: opacity 1s ease-in-out;
+    
+}
+
+.my-heart-full:hover{
+    opacity: 1;
+    background-image: linear-gradient($main-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+   
+    
+
+
+}
+
+.restaurants-container {
+    box-sizing: border-box;
+
+    @media screen and (min-width: 1024px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 100px;
+    }
+}
