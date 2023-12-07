@@ -90,7 +90,8 @@
     padding-bottom: 57px;
 
     .form__button {
-        background: var(--Button-Gradient, linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%));
+        
+        background: linear-gradient(#FF79DA , #9356DC );
         border-radius: 25px;
         width: 218px;
         height: 50px;
@@ -105,6 +106,11 @@
         font-weight: 500;
         color: white;
         margin: 13px 18.75px 13px 18.75px;
+
+    }
+
+    .form__button:hover{
+        background: linear-gradient(#FFA3E8, #B088F9);
 
     }
 }

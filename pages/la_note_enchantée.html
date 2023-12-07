@@ -38,12 +38,14 @@
         <section class="container">
             <div class="container__banner">
                 <h1 class="container__title">La note enchantée
-                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-heart my-heart-empty position-heart"></i>
+                    <i class="fa-solid fa-heart my-heart-full position-heart"></i>
                 </h1>
             </div>
             <div class="menu">
-                <h2 class="menu__title">ENTRÉES</h2>
-                <div class="menu__block">
+                <div class="menu__block show">
+                    <h2 class="menu__title">ENTRÉES</h2>
+
                     <button class="choice">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Ravioles de fois gras</h3>
@@ -74,15 +76,16 @@
                     <button class="choice">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Foie gras de canard cuit entier</h3>
-                            <p class="choice__text--subtitle">Confiture de figue  et pain toasté</p>
+                            <p class="choice__text--subtitle">Confiture de figue et pain toasté</p>
                         </div>
                         <div class="choice__price">
                             <span>35€</span>
                         </div>
                     </button>
                 </div>
-                <h2 class="menu__title">PLATS</h2>
-                <div class="menu__block">
+
+                <div class="menu__block show">
+                    <h2 class="menu__title">PLATS</h2>
                     <button class="choice">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Noix de coquilles Saint-Jacques</h3>
@@ -111,8 +114,9 @@
                         </div>
                     </button>
                 </div>
-                <h2 class="menu__title">DESSERTS</h2>
-                <div class="menu__block">
+
+                <div class="menu__block show">
+                    <h2 class="menu__title">DESSERTS</h2>
                     <button class="choice">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Macaron noisette et chocolat</h3>
@@ -159,7 +163,8 @@
             <li><a href="#" class="footer__list--color"><span><i
                             class="fa-regular fa-handshake"></i></span>Partenaire</a></li>
             <li><a href="#" class="footer__list--color">Mentions légales</a></li>
-            <li><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=fr&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1241721736%3A1701721676032400&theme=glif" class="footer__list--color">Contact</a></li>
+            <li><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=fr&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1241721736%3A1701721676032400&theme=glif"
+                    class="footer__list--color">Contact</a></li>
         </ol>
     </footer>
 </body>

@@ -30,17 +30,20 @@
         font-weight: 400;
     }
 
-    .container__title i {
-        position: relative;
-        left: 0.5em;
-    }
 }
+
+    .position-heart {
+        position: absolute;
+        padding-left: 30px;
+        padding-top: 8px;
+
+    }
+
 
 .menu {
     margin: 10px;
     display: flex;
     flex-direction: column;
-
     @media screen and (min-width: 1024px) {
         margin-left: 20%;
         margin-right: 20%;
