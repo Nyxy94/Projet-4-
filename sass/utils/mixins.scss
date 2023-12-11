@@ -18,6 +18,9 @@
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
+
+
+
 @mixin ellipsis {
     white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
     text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/

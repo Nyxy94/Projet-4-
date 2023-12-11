@@ -11,13 +11,13 @@
         gap: 100px;
     }
 
-
     .footer__title {
         font-family: shrikhand;
         font-size: 18px;
         font-weight: 400;
         margin: 0px;
-        @media screen and (min-width: 1024px){
+
+        @media screen and (min-width: 1024px) {
             padding-right: 50px;
         }
     }
@@ -28,7 +28,7 @@
         font-size: 16px;
         display: flex;
         flex-direction: column;
-        
+
 
         @media screen and (min-width: 1024px) {
             flex-direction: row;
@@ -41,14 +41,14 @@
         }
 
     }
-    @media screen and (min-width: 1024px){
+
+    @media screen and (min-width: 1024px) {
         .footer__desktop {
-        flex-direction: row;
-        display: flex;
-        gap: 20px;
+            flex-direction: row;
+            display: flex;
+            gap: 20px;
+        }
     }
-    }
-    
 
     .fa-utensils {
         padding-right: 11px;
