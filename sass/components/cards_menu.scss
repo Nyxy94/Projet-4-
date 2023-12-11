@@ -4,12 +4,13 @@
     border-top-left-radius: 40px;
     position: relative;
     margin-top: -2em;
-    
+
     @media screen and (min-width: 1024px) {
         margin-left: 192px;
         margin-right: 192px;
 
     }
+
     .container__banner {
         font-family: shrikhand;
         text-align: center;
@@ -32,22 +33,23 @@
 
 }
 
-    .position-heart {
-        position: absolute;
-        padding-left: 30px;
-        padding-top: 8px;
+.position-heart {
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 8px;
 
-    }
+}
 
 
 .menu {
     margin: 10px;
     display: flex;
     flex-direction: column;
+
+
     @media screen and (min-width: 1024px) {
         margin-left: 20%;
         margin-right: 20%;
-
     }
 
     .menu__title {
@@ -56,7 +58,6 @@
         width: 35px;
         border-bottom: 2px solid #99E2D0;
         margin-bottom: 12px;
-
     }
 
     .menu__block {
@@ -64,8 +65,38 @@
         flex-direction: column;
         gap: 12px;
         margin-bottom: 40px;
+        opacity: 0;
+    }
 
-
+    .menu__block.show {
+        animation: fadeIn 600ms forwards;
+    }
+    
+    @keyframes fadeIn {  /*defini état final de l'animation*/
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeInUp {  /* animation pour une transition progressive en fondu*/
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* affichage div par div*/
+    
+    .menu__block.show:nth-child(1) { /*cible le premier enfant*/
+        animation-delay: 0.5s;
+    }
+    
+    .menu__block.show:nth-child(2) { /*cible le deuxieme enfant*/
+        animation-delay: 1s;
+    }
+    
+    .menu__block.show:nth-child(3) { /*cible le troiseme enfant*/
+        animation-delay: 1.5s;
     }
 }
 
@@ -74,78 +105,143 @@
     border-radius: 15px;
     @include button-menu-shadow;
     border: none;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    overflow: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 15px;
+    padding: 0px;
 
 
     .choice__text {
         display: flex;
         flex-direction: column;
         text-align: left;
+        flex: 1;
+        padding-left: 15px;
+        @include ellipsis;
     }
 
     .choice__text--title {
         font-size: 18px;
         font-weight: 500;
         margin: 0px;
+        padding-top: 15px;
+        @include ellipsis;
     }
 
     .choice__text--subtitle {
         font-size: 15px;
         font-weight: 300;
         margin: 0px;
+        padding-bottom: 15px;
+        @include ellipsis;
     }
 
     .choice__price {
-        padding-top: 26px;
+        width: 75px;
+        height: 100%;
+        padding-top: 40px;
+
+
     }
 
     .choice__price span {
         font-size: 15px;
         font-weight: 700;
     }
+
+    .choice__check {
+        background: #99E2D0;
+        width: 59px;
+        height: 75px;
+        margin-right: -73px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+
+    &:hover>.choice__check {
+        margin: 0;
+        transition: all 0.8s;
+    }
 }
 
+.fa-check {
+    border-radius: 100%;
+    color: #99E2D0;
+    background: white;
+    font-size: 15px;
+    padding: 2px;
+}
 
 .choice-without-shadow {
     background-color: white;
     border-radius: 15px;
     border: none;
-    box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    overflow: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 15px;
+    padding: 0px;
 
     .choice-without-shadow__text {
         display: flex;
         flex-direction: column;
         text-align: left;
+        flex: 1;
+        padding-left: 15px;
+        @include ellipsis;
     }
 
     .choice-without-shadow__text--title {
         font-size: 18px;
         font-weight: 500;
         margin: 0px;
+        padding-top: 15px;
+        @include ellipsis;
     }
 
     .choice-without-shadow__text--subtitle {
         font-size: 15px;
         font-weight: 300;
         margin: 0px;
+        padding-bottom: 15px;
+        @include ellipsis;
     }
 
     .choice-without-shadow__price {
-        padding-top: 26px;
+        width: 75px;
+        height: 100%;
+        display: flex;
+        padding-top: 40px;
+        justify-content: center;
     }
 
     .choice-without-shadow__price span {
         font-size: 15px;
         font-weight: 700;
+    }
+
+    .choice-without-shadow__check {
+        background: #99E2D0;
+        width: 59px;
+        height: 75px;
+        margin-right: -73px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+
+    &:hover>.choice-without-shadow__check {
+        margin: 0;
+        transition: all 0.8s;
     }
 }

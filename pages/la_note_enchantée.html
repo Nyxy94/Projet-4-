@@ -21,19 +21,19 @@
 </head>
 
 <body>
-    <div>
-        <header>
-            <nav class="navbar">
-                <div class="navbar__back">
-                    <a href="../index.html" class="navbar__arrow">
-                        <i class="fa-solid fa-arrow-left"></i>
-                    </a>
-                    <img class="navbar__logo" src="../images/logo/ohmyfood.png" alt="Logo ohmyfood">
-                </div>
-                <img class="img-menu" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
-            </nav>
-        </header>
-    </div>
+    <header>
+        <nav class="navbar">
+            <div class="navbar__arrow">
+                <a href="../index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+            <div class="navbar__title">
+                <h1>Ohmyfood</h1>
+            </div>
+        </nav>
+    </header>
+    <img class="img-menu" src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
     <main>
         <section class="container">
             <div class="container__banner">
@@ -54,6 +54,9 @@
                         <div class="choice__price">
                             <span>25€</span>
                         </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </button>
                     <button class="choice">
                         <div class="choice__text">
@@ -62,6 +65,9 @@
                         </div>
                         <div class="choice__price">
                             <span>35€</span>
+                        </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
                         </div>
                     </button>
                     <button class="choice-without-shadow">
@@ -72,6 +78,9 @@
                         <div class="choice-without-shadow__price">
                             <span>20€</span>
                         </div>
+                        <div class="choice-without-shadow__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </button>
                     <button class="choice">
                         <div class="choice__text">
@@ -80,6 +89,9 @@
                         </div>
                         <div class="choice__price">
                             <span>35€</span>
+                        </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
                         </div>
                     </button>
                 </div>
@@ -94,6 +106,9 @@
                         <div class="choice__price">
                             <span>40€</span>
                         </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </button>
                     <button class="choice">
                         <div class="choice__text">
@@ -103,6 +118,9 @@
                         <div class="choice__price">
                             <span>35€</span>
                         </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </button>
                     <button class="choice">
                         <div class="choice__text">
@@ -111,6 +129,9 @@
                         </div>
                         <div class="choice__price">
                             <span>45€</span>
+                        </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
                         </div>
                     </button>
                 </div>
@@ -125,6 +146,9 @@
                         <div class="choice__price">
                             <span>18€</span>
                         </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </button>
                     <button class="choice">
                         <div class="choice__text">
@@ -134,6 +158,9 @@
                         <div class="choice__price">
                             <span>22€</span>
                         </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
                     </button>
                     <button class="choice">
                         <div class="choice__text">
@@ -142,6 +169,9 @@
                         </div>
                         <div class="choice__price">
                             <span>23€</span>
+                        </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
                         </div>
                     </button>
                 </div>
@@ -158,13 +188,23 @@
     <footer class="footer">
         <h2 class="footer__title">ohmyfood</h2>
         <ol class="footer__list">
-            <li><a href="#" class="footer__list--color"><span><i class="fa-solid fa-utensils"></i></span>Proposer un
-                    restaurant</a></li>
-            <li><a href="#" class="footer__list--color"><span><i
-                            class="fa-regular fa-handshake"></i></span>Partenaire</a></li>
-            <li><a href="#" class="footer__list--color">Mentions légales</a></li>
-            <li><a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=fr&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1241721736%3A1701721676032400&theme=glif"
-                    class="footer__list--color">Contact</a></li>
+            <div class="footer__desktop">
+                <li>
+                    <a href="#"><span><i class="fa-solid fa-utensils"></i></span>Proposer un restaurant</a>
+                </li>
+                <li>
+                    <a href="#"><span><i class="fa-regular fa-handshake"></i></span>Partenaire</a>
+                </li>
+            </div>
+            <div class="footer__desktop">
+                <li>
+                    <a href="#" class="footer__list--weight">Mentions légales</a>
+                </li>
+                <li>
+                    <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=fr&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1241721736%3A1701721676032400&theme=glif"
+                        class="footer__list--weight">Contact</a>
+                </li>
+            </div>
         </ol>
     </footer>
 </body>

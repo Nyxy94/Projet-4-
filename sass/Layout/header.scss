@@ -6,9 +6,9 @@
 
 .navbar {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 42px;
 
     .navbar__back {
         background-color: white;
@@ -22,20 +22,22 @@
     }
 
     .navbar__arrow {
-        position: relative;
-        right: 150px;
-        font-size: 1em;
-
-        
+        padding-left: 17px;
+        font-size: 20px;
     }
 
     .navbar__logo {
         width: 197px;
-        height: 36px;
-        position: absolute;
+    }
 
+    .navbar__title {
+        flex-basis: 90%;
+        text-align: center;
+        font-size: 30px;
+        padding: 10px 63px 9px 0px;
     }
 }
+
 
 .img-menu {
     width: 100%;

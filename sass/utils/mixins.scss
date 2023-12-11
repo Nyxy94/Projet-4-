@@ -5,10 +5,21 @@
 @mixin card-shadow {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 }
+
 @mixin fonctionnement-button-shadow {
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
 
 @mixin button-menu-shadow {
     box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+}
+
+@mixin button-new {
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+@mixin ellipsis {
+    white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+    text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+    overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }

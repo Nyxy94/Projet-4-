@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -12,6 +13,14 @@ li {
   list-style: none;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  margin: 0px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
 .footer {
   background: var(--Grey, #353535);
   padding: 22px 25px;
@@ -22,7 +31,7 @@ li {
     flex-direction: row-reverse;
     display: flex;
     align-items: center;
-    gap: 120px;
+    gap: 100px;
   }
 }
 .footer .footer__title {
@@ -31,22 +40,33 @@ li {
   font-weight: 400;
   margin: 0px;
 }
+@media screen and (min-width: 1024px) {
+  .footer .footer__title {
+    padding-right: 50px;
+  }
+}
 .footer .footer__list {
   padding: 0px;
   font-weight: 500;
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
 }
 @media screen and (min-width: 1024px) {
   .footer .footer__list {
     flex-direction: row;
-    gap: 20px;
+    gap: 45px;
   }
 }
 .footer .footer__list .footer__list--weight {
   font-weight: 400;
+}
+@media screen and (min-width: 1024px) {
+  .footer .footer__desktop {
+    flex-direction: row;
+    display: flex;
+    gap: 20px;
+  }
 }
 .footer .fa-utensils {
   padding-right: 11px;
@@ -61,9 +81,9 @@ footer a {
 
 .navbar {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 42px;
 }
 .navbar .navbar__back {
   background-color: white;
@@ -75,14 +95,17 @@ footer a {
   align-items: center;
 }
 .navbar .navbar__arrow {
-  position: relative;
-  right: 150px;
-  font-size: 1em;
+  padding-left: 17px;
+  font-size: 20px;
 }
 .navbar .navbar__logo {
   width: 197px;
-  height: 36px;
-  position: absolute;
+}
+.navbar .navbar__title {
+  flex-basis: 90%;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px 63px 9px 0px;
 }
 
 .img-menu {
@@ -228,6 +251,7 @@ footer a {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   height: 16em;
   margin-bottom: 18px;
+  position: relative;
 }
 @media screen and (min-width: 1024px) {
   .restaurants .restaurants__card {
@@ -268,6 +292,20 @@ footer a {
 .restaurants .restaurants__heart {
   padding-right: 50px;
   padding-bottom: 28px;
+}
+
+.new {
+  border-radius: 2px;
+  background: #99E2D0;
+  color: #008766;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 9px;
 }
 
 .restaurants-container {
@@ -420,6 +458,7 @@ footer a {
   margin: 10px;
   display: flex;
   flex-direction: column;
+  /* affichage div par div*/
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -439,6 +478,30 @@ footer a {
   flex-direction: column;
   gap: 12px;
   margin-bottom: 40px;
+  opacity: 0;
+}
+.menu .menu__block.show {
+  animation: fadeIn 600ms forwards;
+}
+@keyframes fadeIn { /*defini état final de l'animation*/
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp { /* animation pour une transition progressive en fondu*/
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu .menu__block.show:nth-child(1) { /*cible le premier enfant*/
+  animation-delay: 0.5s;
+}
+.menu .menu__block.show:nth-child(2) { /*cible le deuxieme enfant*/
+  animation-delay: 1s;
+}
+.menu .menu__block.show:nth-child(3) { /*cible le troiseme enfant*/
+  animation-delay: 1.5s;
 }
 
 .choice {
@@ -446,68 +509,140 @@ footer a {
   border-radius: 15px;
   box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   border: none;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  overflow: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 15px;
+  padding: 0px;
 }
 .choice .choice__text {
   display: flex;
   flex-direction: column;
   text-align: left;
+  flex: 1;
+  padding-left: 15px;
+  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+  overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice .choice__text--title {
   font-size: 18px;
   font-weight: 500;
   margin: 0px;
+  padding-top: 15px;
+  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+  overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice .choice__text--subtitle {
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
+  padding-bottom: 15px;
+  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+  overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice .choice__price {
-  padding-top: 26px;
+  width: 75px;
+  height: 100%;
+  padding-top: 40px;
 }
 .choice .choice__price span {
   font-size: 15px;
   font-weight: 700;
+}
+.choice .choice__check {
+  background: #99E2D0;
+  width: 59px;
+  height: 75px;
+  margin-right: -73px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.choice:hover > .choice__check {
+  margin: 0;
+  transition: all 0.8s;
+}
+
+.fa-check {
+  border-radius: 100%;
+  color: #99E2D0;
+  background: white;
+  font-size: 15px;
+  padding: 2px;
 }
 
 .choice-without-shadow {
   background-color: white;
   border-radius: 15px;
   border: none;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  overflow: hidden;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 15px;
+  padding: 0px;
 }
 .choice-without-shadow .choice-without-shadow__text {
   display: flex;
   flex-direction: column;
   text-align: left;
+  flex: 1;
+  padding-left: 15px;
+  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+  overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice-without-shadow .choice-without-shadow__text--title {
   font-size: 18px;
   font-weight: 500;
   margin: 0px;
+  padding-top: 15px;
+  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+  overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice-without-shadow .choice-without-shadow__text--subtitle {
   font-size: 15px;
   font-weight: 300;
   margin: 0px;
+  padding-bottom: 15px;
+  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
+  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
+  overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice-without-shadow .choice-without-shadow__price {
-  padding-top: 26px;
+  width: 75px;
+  height: 100%;
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
 }
 .choice-without-shadow .choice-without-shadow__price span {
   font-size: 15px;
   font-weight: 700;
+}
+.choice-without-shadow .choice-without-shadow__check {
+  background: #99E2D0;
+  width: 59px;
+  height: 75px;
+  margin-right: -73px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+.choice-without-shadow:hover > .choice-without-shadow__check {
+  margin: 0;
+  transition: all 0.8s;
 }
 
 .fa-heart {
@@ -528,38 +663,6 @@ footer a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-}
-
-.menu__block {
-  opacity: 0;
-}
-
-.menu__block.show {
-  animation: fadeIn 600ms forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-/* affichage div par div*/
-.menu__block.show:nth-child(1) {
-  animation-delay: 0.5s;
-}
-
-.menu__block.show:nth-child(2) {
-  animation-delay: 1s;
-}
-
-.menu__block.show:nth-child(3) {
-  animation-delay: 1.5s;
 }
 
 /*# sourceMappingURL=main.css.map */
