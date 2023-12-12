@@ -1,6 +1,7 @@
 @charset "UTF-8";
 body {
-  margin: 0px;
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
@@ -51,6 +52,7 @@ h1 {
   font-size: 16px;
   display: flex;
   flex-direction: column;
+  gap: 7px;
 }
 @media screen and (min-width: 1024px) {
   .footer .footer__list {
@@ -60,6 +62,11 @@ h1 {
 }
 .footer .footer__list .footer__list--weight {
   font-weight: 400;
+}
+.footer .footer__desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 @media screen and (min-width: 1024px) {
   .footer .footer__desktop {
@@ -77,6 +84,7 @@ h1 {
 
 footer a {
   color: white;
+  margin-bottom: 7px;
 }
 
 .navbar {
@@ -94,6 +102,11 @@ footer a {
   justify-content: center;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  .navbar .navbar__back {
+    height: 96px;
+  }
+}
 .navbar .navbar__arrow {
   padding-left: 17px;
   font-size: 20px;
@@ -107,6 +120,11 @@ footer a {
   font-size: 30px;
   padding: 10px 63px 9px 0px;
 }
+@media screen and (min-width: 1024px) {
+  .navbar .navbar__title {
+    padding: 26px 63px 26px 0px;
+  }
+}
 
 .img-menu {
   width: 100%;
@@ -115,7 +133,6 @@ footer a {
 }
 
 .text-content {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
   background-color: #f3f3f3;
   display: flex;
@@ -127,6 +144,7 @@ footer a {
   height: 68px;
   margin: 0px 58px 0px 42px;
   padding-top: 39px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 @media screen and (min-width: 1024px) {
   .text-content .text-content__title {
@@ -381,13 +399,10 @@ footer a {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   align-items: center;
 }
-.fonctionnement .fa-mobile:hover {
-  color: #9356DC;
+.fonctionnement .icon {
+  color: #7E7E7E;
 }
-.fonctionnement .fa-list:hover {
-  color: #9356DC;
-}
-.fonctionnement .fa-store:hover {
+.fonctionnement .icon:hover {
   color: #9356DC;
 }
 
@@ -400,6 +415,16 @@ footer a {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   width: 218px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+.form .form__button-menu {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+  width: 186px;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -444,8 +469,18 @@ footer a {
 }
 .container .container__title {
   font-size: 28px;
-  margin: 0px;
   font-weight: 400;
+  margin: 0px;
+}
+.container .container__title i {
+  right: 20px;
+  margin-top: 8px;
+}
+@media screen and (min-width: 1024px) {
+  .container .container__title i {
+    right: auto;
+    padding-left: 1em;
+  }
 }
 
 .position-heart {
@@ -483,31 +518,35 @@ footer a {
 .menu .menu__block.show {
   animation: fadeIn 600ms forwards;
 }
-@keyframes fadeIn { /*defini état final de l'animation*/
+@keyframes fadeIn {
+  /*defini état final de l'animation*/
   to {
     opacity: 1;
   }
 }
-@keyframes fadeInUp { /* animation pour une transition progressive en fondu*/
+@keyframes fadeInUp {
+  /* animation pour une transition progressive en fondu*/
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-.menu .menu__block.show:nth-child(1) { /*cible le premier enfant*/
+.menu .menu__block.show:nth-child(1) {
+  /*cible le premier enfant*/
   animation-delay: 0.5s;
 }
-.menu .menu__block.show:nth-child(2) { /*cible le deuxieme enfant*/
+.menu .menu__block.show:nth-child(2) {
+  /*cible le deuxieme enfant*/
   animation-delay: 1s;
 }
-.menu .menu__block.show:nth-child(3) { /*cible le troiseme enfant*/
+.menu .menu__block.show:nth-child(3) {
+  /*cible le troiseme enfant*/
   animation-delay: 1.5s;
 }
 
 .choice {
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
   border: none;
   display: flex;
   flex-direction: row;
@@ -544,7 +583,7 @@ footer a {
   overflow: hidden; /* masquer contenu qui depasse de la boite*/
 }
 .choice .choice__price {
-  width: 75px;
+  width: 55px;
   height: 100%;
   padding-top: 40px;
 }
@@ -578,71 +617,13 @@ footer a {
   padding: 2px;
 }
 
-.choice-without-shadow {
-  background-color: white;
-  border-radius: 15px;
-  border: none;
-  display: flex;
-  flex-direction: row;
-  overflow: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 0px;
+.choice__check:hover > div > i {
+  transition: transform 0.3s;
+  transform: rotate(360deg);
 }
-.choice-without-shadow .choice-without-shadow__text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  flex: 1;
-  padding-left: 15px;
-  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
-  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
-  overflow: hidden; /* masquer contenu qui depasse de la boite*/
-}
-.choice-without-shadow .choice-without-shadow__text--title {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0px;
-  padding-top: 15px;
-  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
-  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
-  overflow: hidden; /* masquer contenu qui depasse de la boite*/
-}
-.choice-without-shadow .choice-without-shadow__text--subtitle {
-  font-size: 15px;
-  font-weight: 300;
-  margin: 0px;
-  padding-bottom: 15px;
-  white-space: nowrap; /*empeche le texte de passer a la ligne suivante*/
-  text-overflow: ellipsis; /* affiche ... quand le texte est trop long*/
-  overflow: hidden; /* masquer contenu qui depasse de la boite*/
-}
-.choice-without-shadow .choice-without-shadow__price {
-  width: 75px;
-  height: 100%;
-  display: flex;
-  padding-top: 40px;
-  justify-content: center;
-}
-.choice-without-shadow .choice-without-shadow__price span {
-  font-size: 15px;
-  font-weight: 700;
-}
-.choice-without-shadow .choice-without-shadow__check {
-  background: #99E2D0;
-  width: 59px;
-  height: 75px;
-  margin-right: -73px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition-duration: 0.3s;
-  cursor: pointer;
-}
-.choice-without-shadow:hover > .choice-without-shadow__check {
-  margin: 0;
-  transition: all 0.8s;
+
+.shadow {
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
 }
 
 .fa-heart {
@@ -655,14 +636,16 @@ footer a {
   opacity: 0;
   transform-origin: bottom;
   transition: opacity 1s ease-in-out;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-text-fill-color: transparent; /* permet de rendre visible le dégradé lineaire a travers le texte*/
+  background-clip: text; /* defini arriere plan uniquement au contenu textuel*/
+  -webkit-background-clip: text; /* indique que le fond doit etre restreint a la zone de text*/
 }
 
 .my-heart-full:hover {
   opacity: 1;
   background-image: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text; /* indique que le fond doit etre restreint a la zone de text*/
-  color: transparent; /* permet de rendre visible le dégradé lineaire a travers le texte*/
+  transition: opacity 1s ease-in-out;
 }
 
 /*# sourceMappingURL=main.css.map */

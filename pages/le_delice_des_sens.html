@@ -37,16 +37,16 @@
     <main>
         <section class="container">
             <div class="container__banner">
-                <h1 class="container__title">Le délice des sens
-                    <i class="fa-regular fa-heart my-heart-empty position-heart"></i>
-                    <i class="fa-solid fa-heart my-heart-full position-heart"></i>
-                </h1>
+                <h2 class="container__title">Le délice des sens
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart my-heart-full "></i>
+                </h2>
             </div>
             <div class="menu">
                 <div class="menu__block show">
-                    <h2 class="menu__title">ENTRÉES</h2>
+                    <h3 class="menu__title">ENTRÉES</h3>
 
-                    <button class="choice">
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Tartare de thon</h3>
                             <p class="choice__text--subtitle">Assaisonné au yuzu</p>
@@ -57,8 +57,8 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
-                    <button class="choice">
+                    </article>
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Bouchée de homard croustillant</h3>
                             <p class="choice__text--subtitle">Et sa farandole de petits légumes</p>
@@ -69,23 +69,8 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
-                    <button class="choice-without-shadow">
-                        <div class="choice-without-shadow__text">
-                            <h3 class="choice-without-shadow__text--title">Poulet rôti aux herbes de Provence</h3>
-                            <p class="choice-without-shadow__text--subtitle">Et sa crème de truffe</p>
-                        </div>
-                        <div class="choice-without-shadow__price">
-                            <span>40€</span>
-                        </div>
-                        <div class="choice-without-shadow__check">
-                            <i class="fa-solid fa-check"></i>
-                        </div>
-                    </button>
-                </div>
-                <div class="menu__block show">
-                    <h2 class="menu__title">PLATS</h2>
-                    <button class="choice">
+                    </article>
+                    <article  class="choice">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Poulet rôti aux herbes de Provence</h3>
                             <p class="choice__text--subtitle">Et sa crème de truffe</p>
@@ -96,8 +81,23 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
-                    <button class="choice">
+                    </article>
+                </div>
+                <div class="menu__block show">
+                    <h3 class="menu__title">PLATS</h3>
+                    <article class="choice shadow">
+                        <div class="choice__text">
+                            <h3 class="choice__text--title">Poulet rôti aux herbes de Provence</h3>
+                            <p class="choice__text--subtitle">Et sa crème de truffe</p>
+                        </div>
+                        <div class="choice__price">
+                            <span>40€</span>
+                        </div>
+                        <div class="choice__check">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                    </article>
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Langouste rôtie</h3>
                             <p class="choice__text--subtitle">Et ses légumes de saison</p>
@@ -108,8 +108,8 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
-                    <button class="choice">
+                    </article>
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Côte de boeuf Angus</h3>
                             <p class="choice__text--subtitle">Et sa purée de panais</p>
@@ -120,12 +120,11 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
+                    </article>
                 </div>
                 <div class="menu__block show">
-                    <h2 class="menu__title">DESSERTS</h2>
-
-                    <button class="choice">
+                    <h3 class="menu__title">DESSERTS</h3>
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Farandole de desserts</h3>
                             <p class="choice__text--subtitle">Du chef</p>
@@ -136,8 +135,8 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
-                    <button class="choice">
+                    </article>
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Crème brulée</h3>
                             <p class="choice__text--subtitle">Revisitée</p>
@@ -148,8 +147,8 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
-                    <button class="choice">
+                    </article>
+                    <article class="choice shadow">
                         <div class="choice__text">
                             <h3 class="choice__text--title">Tiramisu</h3>
                             <p class="choice__text--subtitle">À la noisette</p>
@@ -160,7 +159,7 @@
                         <div class="choice__check">
                             <i class="fa-solid fa-check"></i>
                         </div>
-                    </button>
+                    </article>
                 </div>
             </div>
             <div>
@@ -188,7 +187,7 @@
                     <a href="#" class="footer__list--weight">Mentions légales</a>
                 </li>
                 <li>
-                    <a href="https://accounts.google.com/v3/signin/identifier?authuser=0&continue=https%3A%2F%2Fmyaccount.google.com%2F%3Futm_source%3Dsign_in_no_continue%26pli%3D1&ec=GAlAwAE&hl=fr&service=accountsettings&flowName=GlifWebSignIn&flowEntry=AddSession&dsh=S1241721736%3A1701721676032400&theme=glif"
+                    <a href="mailto:email@example.com"
                         class="footer__list--weight">Contact</a>
                 </li>
             </div>

@@ -2,18 +2,22 @@
     position: absolute;
     font-size: 22px;
     cursor: pointer;
+    
 }
 
 .my-heart-full {
     opacity: 0;
     transform-origin: bottom ;
     transition: opacity 1s ease-in-out;  
+    background-image: linear-gradient($main-color, $secondary-color);
+    -webkit-text-fill-color: transparent; /* permet de rendre visible le dégradé lineaire a travers le texte*/
+    background-clip: text; /* defini arriere plan uniquement au contenu textuel*/
+    -webkit-background-clip: text; /* indique que le fond doit etre restreint a la zone de text*/
 }
 
 .my-heart-full:hover{
     opacity: 1;
     background-image: linear-gradient($main-color, $secondary-color);
-    background-clip: text;
-    -webkit-background-clip: text; /* indique que le fond doit etre restreint a la zone de text*/
-    color: transparent;  /* permet de rendre visible le dégradé lineaire a travers le texte*/
+    transition: opacity 1s ease-in-out;
+     
 }

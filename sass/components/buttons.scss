@@ -63,17 +63,17 @@
         align-items: center;
     }
 
-    .fa-mobile:hover {
+
+
+    .icon {
+        color: #7E7E7E;
+    }
+
+    .icon:hover {
         color: $main-color;
     }
 
-    .fa-list:hover {
-        color: $main-color;
-    }
-
-    .fa-store:hover {
-        color: $main-color;
-    }
+    
 
 
 }
@@ -88,6 +88,17 @@
         background: linear-gradient(#FF79DA, #9356DC);
         border-radius: 25px;
         width: 218px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        @include button-shadow;
+    }
+
+    .form__button-menu {
+        background: linear-gradient(#FF79DA, #9356DC);
+        border-radius: 25px;
+        width: 186px;
         height: 50px;
         display: flex;
         justify-content: center;
