@@ -196,12 +196,14 @@
     
 }
 
-.choice__check:hover > div > i {
-    transition: transform 0.3s;
-    transform: rotate(360deg);
+.fa-check {
+transition: transform 1.5s;
 }
 
-
+.choice:hover > div > .fa-check { 
+    transform: rotate(360deg);
+    
+}
 
 
 .shadow {

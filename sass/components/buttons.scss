@@ -78,13 +78,12 @@
 
 }
 
-.form {
+.button {
     display: flex;
     justify-content: center;
     padding-bottom: 57px;
 
-    .form__button {
-
+    .button__content {
         background: linear-gradient(#FF79DA, #9356DC);
         border-radius: 25px;
         width: 218px;
@@ -95,7 +94,7 @@
         @include button-shadow;
     }
 
-    .form__button-menu {
+    .button__menu {
         background: linear-gradient(#FF79DA, #9356DC);
         border-radius: 25px;
         width: 186px;
@@ -106,7 +105,7 @@
         @include button-shadow;
     }
 
-    .form__content {
+    .button__text {
         font-size: 16px;
         font-weight: 500;
         color: white;
@@ -114,8 +113,11 @@
 
     }
 
-    .form__button:hover {
+    .button__content:hover  {
         background: linear-gradient(#FFA3E8, #B088F9);
+    }
 
+    .button__menu:hover {
+        background: linear-gradient(#FFA3E8, #B088F9);
     }
 }
