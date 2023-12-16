@@ -194,6 +194,7 @@ footer a {
   opacity: 0.9;
   animation: disappear 200ms 3s forwards;
   transform-origin: top;
+  max-width: 1440px;
 }
 
 .letter {
